@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>清除浮动方法总结 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="浮动(float)，可以很优雅的让原本独立傲娇的块级元素和谐的站立于同一行，但是，同时这也引起了父容器的塌方，造成页面布局的混乱清除浮动方法一: 使用overflow属性原理：找到浮动元素的父元素，在父元素的样式中添加一个属性overflow:hidden优点：简单，浏览器支持性好缺点：不能和position配合使用，超出的尺寸会被隐藏清除浮动方法二: 添加空标签     .d1{width:10">
+  <meta name="description" content="浮动(float)，可以很优雅的让原本独立傲娇的块级元素和谐的站立于同一行，但是，同时这也引起了父容器的塌方，造成页面布局的混乱清除浮动方法一: 使用overflow属性原理：找到浮动元素的父元素，在父元素的样式中添加一个属性overflow:hidden优点：简单，浏览器支持性好缺点：不能和position配合使用，超出的尺寸会被隐藏 清除浮动方法二: 添加空标签     .d1{width:1">
 <meta property="og:type" content="article">
 <meta property="og:title" content="清除浮动方法总结">
 <meta property="og:url" content="http://yoursite.com/2017/11/13/清除浮动方法总结/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="浮动(float)，可以很优雅的让原本独立傲娇的块级元素和谐的站立于同一行，但是，同时这也引起了父容器的塌方，造成页面布局的混乱清除浮动方法一: 使用overflow属性原理：找到浮动元素的父元素，在父元素的样式中添加一个属性overflow:hidden优点：简单，浏览器支持性好缺点：不能和position配合使用，超出的尺寸会被隐藏清除浮动方法二: 添加空标签     .d1{width:10">
+<meta property="og:description" content="浮动(float)，可以很优雅的让原本独立傲娇的块级元素和谐的站立于同一行，但是，同时这也引起了父容器的塌方，造成页面布局的混乱清除浮动方法一: 使用overflow属性原理：找到浮动元素的父元素，在父元素的样式中添加一个属性overflow:hidden优点：简单，浏览器支持性好缺点：不能和position配合使用，超出的尺寸会被隐藏 清除浮动方法二: 添加空标签     .d1{width:1">
 <meta property="og:locale" content="ZH-CN">
-<meta property="og:updated_time" content="2017-11-13T02:42:29.097Z">
+<meta property="og:updated_time" content="2017-11-13T02:46:55.837Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="清除浮动方法总结">
-<meta name="twitter:description" content="浮动(float)，可以很优雅的让原本独立傲娇的块级元素和谐的站立于同一行，但是，同时这也引起了父容器的塌方，造成页面布局的混乱清除浮动方法一: 使用overflow属性原理：找到浮动元素的父元素，在父元素的样式中添加一个属性overflow:hidden优点：简单，浏览器支持性好缺点：不能和position配合使用，超出的尺寸会被隐藏清除浮动方法二: 添加空标签     .d1{width:10">
+<meta name="twitter:description" content="浮动(float)，可以很优雅的让原本独立傲娇的块级元素和谐的站立于同一行，但是，同时这也引起了父容器的塌方，造成页面布局的混乱清除浮动方法一: 使用overflow属性原理：找到浮动元素的父元素，在父元素的样式中添加一个属性overflow:hidden优点：简单，浏览器支持性好缺点：不能和position配合使用，超出的尺寸会被隐藏 清除浮动方法二: 添加空标签     .d1{width:1">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -166,12 +166,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="浮动-float-，可以很优雅的让原本独立傲娇的块级元素和谐的站立于同一行，但是，同时这也引起了父容器的塌方，造成页面布局的混乱"><a href="#浮动-float-，可以很优雅的让原本独立傲娇的块级元素和谐的站立于同一行，但是，同时这也引起了父容器的塌方，造成页面布局的混乱" class="headerlink" title="浮动(float)，可以很优雅的让原本独立傲娇的块级元素和谐的站立于同一行，但是，同时这也引起了父容器的塌方，造成页面布局的混乱"></a>浮动<code>(float)</code>，可以很优雅的让原本独立傲娇的块级元素和谐的站立于同一行，但是，同时这也引起了父容器的塌方，造成页面布局的混乱</h4><h4 id="清除浮动方法一-使用overflow属性"><a href="#清除浮动方法一-使用overflow属性" class="headerlink" title="清除浮动方法一: 使用overflow属性"></a>清除浮动方法一: 使用<code>overflow</code>属性</h4><h5 id="原理：找到浮动元素的父元素，在父元素的样式中添加一个属性overflow-hidden"><a href="#原理：找到浮动元素的父元素，在父元素的样式中添加一个属性overflow-hidden" class="headerlink" title="原理：找到浮动元素的父元素，在父元素的样式中添加一个属性overflow:hidden"></a>原理：找到浮动元素的父元素，在父元素的样式中添加一个属性<code>overflow:hidden</code></h5><h5 id="优点：简单，浏览器支持性好"><a href="#优点：简单，浏览器支持性好" class="headerlink" title="优点：简单，浏览器支持性好"></a>优点：简单，浏览器支持性好</h5><h5 id="缺点：不能和position配合使用，超出的尺寸会被隐藏"><a href="#缺点：不能和position配合使用，超出的尺寸会被隐藏" class="headerlink" title="缺点：不能和position配合使用，超出的尺寸会被隐藏"></a>缺点：不能和<code>position</code>配合使用，超出的尺寸会被隐藏</h5><h4 id="清除浮动方法二-添加空标签"><a href="#清除浮动方法二-添加空标签" class="headerlink" title="清除浮动方法二: 添加空标签"></a>清除浮动方法二: 添加空标签</h4><blockquote>
+        <h4 id="浮动-float-，可以很优雅的让原本独立傲娇的块级元素和谐的站立于同一行，但是，同时这也引起了父容器的塌方，造成页面布局的混乱"><a href="#浮动-float-，可以很优雅的让原本独立傲娇的块级元素和谐的站立于同一行，但是，同时这也引起了父容器的塌方，造成页面布局的混乱" class="headerlink" title="浮动(float)，可以很优雅的让原本独立傲娇的块级元素和谐的站立于同一行，但是，同时这也引起了父容器的塌方，造成页面布局的混乱"></a>浮动<code>(float)</code>，可以很优雅的让原本独立傲娇的块级元素和谐的站立于同一行，但是，同时这也引起了父容器的塌方，造成页面布局的混乱</h4><h4 id="清除浮动方法一-使用overflow属性"><a href="#清除浮动方法一-使用overflow属性" class="headerlink" title="清除浮动方法一: 使用overflow属性"></a>清除浮动方法一: 使用<code>overflow</code>属性</h4><p>原理：找到浮动元素的父元素，在父元素的样式中添加一个属性<code>overflow:hidden</code><br>优点：简单，浏览器支持性好<br>缺点：不能和<code>position</code>配合使用，超出的尺寸会被隐藏</p>
+<h4 id="清除浮动方法二-添加空标签"><a href="#清除浮动方法二-添加空标签" class="headerlink" title="清除浮动方法二: 添加空标签"></a>清除浮动方法二: 添加空标签</h4><blockquote>
 <p><style><br>    .d1{width:100px;height:100px;background:#f00;float:left}<br>    .d2{width:200px;height:200px;background:#0f0;float:right}<br>    .clear{clear:both}<br></style></p>
 <div><br>    <div class="d1">left</div><br>    <div class="d2">ringt</div><br>    <div class="clear"></div><br></div><br><div><br>    div2<br></div>
 
 </blockquote>
-<h5 id="原理：在浮动元素下面添加一个空div-设置该标签样式clear-both-来清除浮动对页面的影响"><a href="#原理：在浮动元素下面添加一个空div-设置该标签样式clear-both-来清除浮动对页面的影响" class="headerlink" title="原理：在浮动元素下面添加一个空div,设置该标签样式clear:both;来清除浮动对页面的影响"></a>原理：在浮动元素下面添加一个空<code>div</code>,设置该标签样式<code>clear:both;</code>来清除浮动对页面的影响</h5><h5 id="优点：代码少，浏览器支持性好，不易出现怪问题"><a href="#优点：代码少，浏览器支持性好，不易出现怪问题" class="headerlink" title="优点：代码少，浏览器支持性好，不易出现怪问题"></a>优点：代码少，浏览器支持性好，不易出现怪问题</h5><h5 id="缺点：若页面很多浮动，会增加很多无意义的div"><a href="#缺点：若页面很多浮动，会增加很多无意义的div" class="headerlink" title="缺点：若页面很多浮动，会增加很多无意义的div"></a>缺点：若页面很多浮动，会增加很多无意义的<code>div</code></h5><h4 id="清除浮动方法三：使用伪元素清除浮动"><a href="#清除浮动方法三：使用伪元素清除浮动" class="headerlink" title="清除浮动方法三：使用伪元素清除浮动"></a>清除浮动方法三：使用伪元素清除浮动</h4><pre><code>//使用伪元素清除浮动
+<p>原理：在浮动元素下面添加一个空div,设置该标签样式<code>clear:both;</code>来清除浮动对页面的影响<br>优点：代码少，浏览器支持性好，不易出现怪问题<br>缺点：若页面很多浮动，会增加很多无意义的div</p>
+<h4 id="清除浮动方法三：使用伪元素清除浮动"><a href="#清除浮动方法三：使用伪元素清除浮动" class="headerlink" title="清除浮动方法三：使用伪元素清除浮动"></a>清除浮动方法三：使用伪元素清除浮动</h4><pre><code>//使用伪元素清除浮动
     &lt;style&gt;
         .d1{width:100px;height:100px;background:#f00;float:left}
         .d2{width:200px;height:200px;background:#0f0;float:right}
@@ -190,7 +192,8 @@
         &lt;div class = &quot;d1&quot;&gt;left&lt;/div&gt;
         &lt;div class = &quot;d2&quot;&gt;ringt&lt;/div&gt; 
     &lt;/div&gt;
-</code></pre><h5 id="原理：与方法二有点类似，IE8及非IE浏览器才支持-after属性，zoom可解决IE6，IE7浮动问题"><a href="#原理：与方法二有点类似，IE8及非IE浏览器才支持-after属性，zoom可解决IE6，IE7浮动问题" class="headerlink" title="原理：与方法二有点类似，IE8及非IE浏览器才支持:after属性，zoom可解决IE6，IE7浮动问题"></a>原理：与方法二有点类似，<code>IE8及非IE浏览器才支持:after属性，zoom可解决IE6，IE7浮动问题</code></h5><h5 id="优点：浏览器支持性好，不易出现怪问题"><a href="#优点：浏览器支持性好，不易出现怪问题" class="headerlink" title="优点：浏览器支持性好，不易出现怪问题"></a>优点：浏览器支持性好，不易出现怪问题</h5><h5 id="缺点：代码多，需要考虑到兼容性"><a href="#缺点：代码多，需要考虑到兼容性" class="headerlink" title="缺点：代码多，需要考虑到兼容性"></a>缺点：代码多，需要考虑到兼容性</h5>
+</code></pre><p>原理：与方法二有点类似，IE8及非IE浏览器才支持:after属性，zoom可解决IE6，IE7浮动问题<br>优点：浏览器支持性好，不易出现怪问题<br>缺点：代码多，需要考虑到兼容性</p>
+
       
 
       
